@@ -1,0 +1,189 @@
+/******************General
+******************/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: rgb(167, 77, 209);
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+.background {
+  background-color: rgb(108, 209, 77);
+}
+
+.header {
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+main{
+  flex: 1 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.copyright {
+  padding-top: 10px;
+}
+
+/******************Animals
+******************/
+
+.img {
+  width: 50%;
+  min-width: 250px;
+  max-width: 500px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.animal {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.animal span {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 2rem;
+}
+
+.animals {
+  background-color: rgb(242, 152, 55);
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border: 5px solid rgb(167, 77, 209);
+}
+
+/******************Buttons
+******************/
+
+button {
+  background-color: rgb(0, 0, 0);
+  border: 3px solid rgb(240, 240, 240);
+  color: white;
+  height: 70px;
+  width: 150px;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50% 0%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.rotate {
+  animation: rotate 2s linear;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateFlipped {
+  0% {
+    transform: rotate(0deg) rotateY(180deg);
+  }
+  100% {
+    transform: rotate(360deg) rotateY(180deg);
+  }
+
+}
+
+.flippedRotate {
+  animation: rotateFlipped 2s linear;
+}
+
+/******************Media Queries
+******************/
+
+@media (min-width: 850px) {
+
+  .animals {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .animal {
+    max-width: 350px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+} /** 850px **/
+
+@media (min-width: 1170px) {
+
+  .animal {
+    max-width: 200px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .img {
+    max-height: 160px;
+    min-width: 200px;
+  }
+
+  button {
+    margin-left: 0px;
+  }
+
+} /** 1170px
